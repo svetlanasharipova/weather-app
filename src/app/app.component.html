@@ -1,0 +1,11 @@
+<div class="element">
+  <h1>Hot Weather Widget</h1>
+  <div class="element-left">
+    <app-main (hotelChanged)="selectedHotel=$event"></app-main>
+  </div>
+
+  <div class="element-right">
+    <app-weather [weather]="selectedHotel?.weather" ></app-weather>
+    <app-social [socialinfo]="selectedHotel?.social_info"></app-social>
+  </div>
+</div>
