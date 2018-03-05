@@ -4,14 +4,10 @@
   <div class="element-left-bottom" *ngIf="hotels$ | async as hotels"> 
     <div class="ele-strip">
       <ul>
-        <li *ngFor="let type of hotelTypes">
+        <!-- у последнего фильтра должен быть class="anc-bor" (без правой границы) -->
+        <li *ngFor="let type of hotelTypes; let lasttype = last;" class="{{ lasttype ? 'anc-bor' : '' }}">
           <a (click)="selectedType=type">{{type}}</a>
         </li>
-
-        <!--   //todo
-        <li class="anc-bor">
-          <a href="#">Weather</a>
-        </li> -->
       </ul>
     </div>
 
