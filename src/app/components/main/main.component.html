@@ -5,8 +5,8 @@
     <div class="ele-strip">
       <ul>
         <!-- у последнего фильтра должен быть class="anc-bor" (без правой границы) -->
-        <li *ngFor="let type of hotelTypes; let lasttype = last;" class="{{ lasttype ? 'anc-bor' : '' }}">
-          <a (click)="selectedType=type">{{type}}</a>
+        <li *ngFor="let type of hotelTypes; let lasttype = last;" [class.anc-bor]="lasttype">
+          <a href ="#" (click)="selectedType=type">{{type}}</a>
         </li>
       </ul>
     </div>
